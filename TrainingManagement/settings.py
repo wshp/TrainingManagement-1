@@ -120,3 +120,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = '1840007522@qq.com'
+DEFAULT_FROM_EMAIL = '1840007522@qq.com'
+EMAIL_HOST_PASSWORD = 'vkchmmfusaimbjbd'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'training.authentication.EmailAuthBackend',
+]
